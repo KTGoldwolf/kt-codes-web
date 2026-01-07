@@ -4,7 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(to bottom, #3a0000, #000041);
+    background: linear-gradient(to bottom, #340f0f, #151544);
 }
 
 .name {
@@ -29,4 +29,5 @@ header img {
     border-radius: 35%;
     -webkit-mask-image: radial-gradient(circle, black var(--fade-start), transparent var(--fade-end));
     mask-image: radial-gradient(circle, black var(--fade-start), transparent var(--fade-end));
+    transition: transform 0.1s ease-out;
 }

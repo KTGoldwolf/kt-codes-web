@@ -14,11 +14,22 @@ h1, h2, h3, h4, h5, h6,
 }
 
 main {
-    max-width: 600px;
     padding: 2rem;
     border-radius: 20px;
     text-align: center;
     background: rgba(245, 222, 179, 0.5);
+    align-self: flex-start;
+    margin: 2rem 0;
+}
+
+/* Make the main pages wider for comfy reading */
+main.wide {
+    width: 80%;
+    max-width: none;
+}
+
+main.wide section {
+    text-align: left;
 }
 
 nav ul {
@@ -27,6 +38,7 @@ nav ul {
 
 .section-title {
     margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 .hardware-list {

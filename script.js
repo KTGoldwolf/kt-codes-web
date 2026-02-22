@@ -24,13 +24,8 @@ img.addEventListener('mouseleave', () => {
 });
 
 
-if (supportsOrientation) {
-    if (isIOS && typeof DeviceOrientationEvent.requestPermission === 'function') {
-        // if we need a special permission, just forget it
-        return;
-    } else {
-        enableGyroscope();
-    }
+if (supportsOrientation && !(isIOS && typeof DeviceOrientationEvent.requestPermission === 'function')) {
+    enableGyroscope();
 }
 
 function enableGyroscope() {

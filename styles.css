@@ -103,3 +103,40 @@ header img {
     mask-image: radial-gradient(circle, black var(--fade-start), transparent var(--fade-end));
     transition: transform 0.1s ease-out;
 }
+
+.holo-wrap {
+    position: relative;
+    display: inline-block;
+    border-radius: 35%;
+    -webkit-mask-image: radial-gradient(circle, black 50%, transparent 90%);
+    mask-image: radial-gradient(circle, black 50%, transparent 90%);
+    isolation: isolate;
+    transition: transform 0.1s ease-out;
+}
+
+header .holo-wrap img {
+    display: block;
+    -webkit-mask-image: none;
+    mask-image: none;
+    transition: none;
+}
+
+.holo-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        var(--holo-angle, 90deg),
+        hsla(0,   100%, 65%, 0.4),
+        hsla(60,  100%, 65%, 0.4) 20%,
+        hsla(120, 100%, 65%, 0.4) 40%,
+        hsla(180, 100%, 65%, 0.4) 60%,
+        hsla(240, 100%, 65%, 0.4) 80%,
+        hsla(300, 100%, 65%, 0.4)
+    );
+    background-size: 200% 200%;
+    background-position: var(--holo-pos-x, 50%) var(--holo-pos-y, 50%);
+    mix-blend-mode: hard-light;
+    opacity: var(--holo-opacity, 0.25);
+    pointer-events: none;
+    transition: opacity 0.4s ease, background-position 0.1s ease-out;
+}

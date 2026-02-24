@@ -130,6 +130,36 @@ header .holo-wrap img {
     transition: opacity 0.4s ease, background-position 0.1s ease-out;
 } */
 
+.holo-shine-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        var(--holo-angle, 90deg),
+        hsla(0,   100%, 65%, 1),
+        hsl(66, 100%, 81%) 10%,
+        hsla(184, 53%, 94%, 0.432) 20%,
+        hsl(231, 100%, 50%) 30%,
+        hsla(184, 53%, 94%, 0.432) 40%,
+        hsl(66, 100%, 81%) 50%,
+        hsla(184, 53%, 94%, 0.432) 60%,
+        hsl(231, 100%, 50%) 70%,
+        hsla(184, 53%, 94%, 0.432) 80%,
+        hsl(66, 100%, 81%) 90%,
+        hsla(0,   100%, 65%, 1)
+    );
+    -webkit-mask-image: url(images/shine-lum-mask.png);
+    -webkit-mask-size: 100% 100%;
+    mask-image: url(images/shine-lum-mask.png);
+    mask-size: 100% 100%;
+    mask-mode: luminance;
+    background-size: 200% 200%;
+    background-position: var(--holo-pos-x, 50%) var(--holo-pos-y, 50%);
+    mix-blend-mode: hard-light;
+    opacity: var(--holo-opacity, 0.25);
+    pointer-events: none;
+    transition: opacity 0.4s ease, background-position 0.1s ease-out;
+}
+
 .holo-overlay {
     position: absolute;
     inset: 0;
@@ -144,7 +174,7 @@ header .holo-wrap img {
         hsla(180, 100%, 65%, 1) 60%,
         hsla(240, 100%, 65%, 1) 70%,
         hsla(60,  100%, 65%, 1) 80%,
-        hsla(0,   100%, 65%, 1) 89%,
+        hsla(0,   100%, 65%, 1) 90%,
         hsla(300, 100%, 65%, 1)
     );
     -webkit-mask-image: url(images/callmekt-lum-mask.png);

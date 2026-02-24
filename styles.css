@@ -120,18 +120,38 @@ header .holo-wrap img {
     transition: none;
 }
 
+/* .holo-lineart {
+    position: absolute;
+    inset: 0;
+    background-image: url(images/callmekt-outline.png);
+    background-size: 200px 200px;
+    background-position: var(--holo-pos-x, 50%) var(--holo-pos-y, 50%);
+    pointer-events: none;
+    transition: opacity 0.4s ease, background-position 0.1s ease-out;
+} */
+
 .holo-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(
         var(--holo-angle, 90deg),
-        hsla(0,   100%, 65%, 0.4),
-        hsla(60,  100%, 65%, 0.4) 20%,
-        hsla(120, 100%, 65%, 0.4) 40%,
-        hsla(180, 100%, 65%, 0.4) 60%,
-        hsla(240, 100%, 65%, 0.4) 80%,
-        hsla(300, 100%, 65%, 0.4)
+        hsla(0,   100%, 65%, 1),
+        hsla(60,  100%, 65%, 1) 10%,
+        hsla(120, 100%, 65%, 1) 20%,
+        hsla(180, 100%, 65%, 1) 30%,
+        hsla(240, 100%, 65%, 1) 40%,
+        hsla(0,   100%, 65%, 1) 50%,
+        hsla(180, 100%, 65%, 1) 60%,
+        hsla(240, 100%, 65%, 1) 70%,
+        hsla(60,  100%, 65%, 1) 80%,
+        hsla(0,   100%, 65%, 1) 89%,
+        hsla(300, 100%, 65%, 1)
     );
+    -webkit-mask-image: url(images/callmekt-lum-mask.png);
+    -webkit-mask-size: 100% 100%;
+    mask-image: url(images/callmekt-lum-mask.png);
+    mask-size: 100% 100%;
+    mask-mode: luminance;
     background-size: 200% 200%;
     background-position: var(--holo-pos-x, 50%) var(--holo-pos-y, 50%);
     mix-blend-mode: hard-light;

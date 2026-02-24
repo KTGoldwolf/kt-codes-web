@@ -78,6 +78,17 @@ nav ul {
     margin-top: 0.4rem;
 }
 
+@media (max-width: 500px) {
+    .hardware-item {
+        flex-direction: column;
+    }
+
+    .hardware-item img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 a[target="_blank"]::after {
     content: "⧉";
     font-size: 0.75em;

@@ -14,11 +14,9 @@
 
 body {
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
     background: linear-gradient(to bottom, #340f0f, #151544);
+    background-attachment: fixed;
     font-family: '8BitOperator', monospace;
 }
 
@@ -28,25 +26,35 @@ h1, h2, h3, h4, h5, h6,
 }
 
 main {
+    width: 680px;
+    max-width: calc(100% - 4rem);
+    box-sizing: border-box;
+    margin: 2rem auto;
     padding: 2rem;
     border-radius: 20px;
     text-align: center;
     background: rgba(245, 222, 179, 0.5);
-    align-self: flex-start;
-    margin: 2rem 0;
 }
 
-main.wide {
-    width: 60%;
-    max-width: none;
-}
-
-main.wide section {
+main section {
     text-align: left;
 }
 
 nav ul {
     text-align: left;
+}
+
+.article-img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.caption {
+    font-size: 0.85em;
+    font-style: italic;
+    text-align: center;
 }
 
 .section-title {
